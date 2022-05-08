@@ -1,104 +1,113 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>stat4market</title>
 </head>
 <body class="page-body">
-  <!-- <style>
-    .page-body{
-      background-color: blueviolet;
-    }
-  </style> -->
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--close main-nav--nojs">
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <img src="./img/image/Webp/Logo_1.webp" alt="Logo" class="main-nav__img">                
-          <span class="main-nav__span">
-            Надежный сервис
-            аналитики для поставщиков
+        <li class="main-nav__item main-nav__item--logo">
+          <picture class="main-nav__img">
+            <source media="(min-width: 1920px)" srcset="./img/image/Webp/LogoMaxDesctop.webp">
+            <source media="(min-width: 1280px)" srcset="./img/image/Webp/LogoDesctop.webp">
+            <source media="(min-width: 768px)" srcset="./img/image/Webp/LogoTable.webp">
+            <img src="./img/image/Webp/LogoMobile.webp" alt="Logo">
+          </picture>
+          <span class="main-nav__span main-nav__span--logo">
+            Надежный сервис<br>
+            аналитики для поставщиков<br>
             на маркетплейсы
           </span>
         </li>
-        <li class="main-nav__item">
-          <select>
-            <option>Аналитика</option>
-          </select>
+        <li class="main-nav__item main-nav__item--hidden">
+          <ul class="main-nav__list main-nav__list--menu">
+            <li class="main-nav__item--menu main-nav__item--analytics">            
+              <select class="main-nav__select">
+                <option>Аналитика</option>
+              </select>
+            </li>
+            <li class="main-nav__item--menu">
+              <a href="#" class="main-nav__link">Обучение</a>
+            </li>
+            <li class="main-nav__item--menu main-nav__item--phone">              
+              <a href="+74994503141" class="main-nav__link main-nav__link--phone">
+                <svg class="main-nav__svg main-nav__svg--phone" width="21" height="21" viewBox="0 0 21 21">
+                  <use xlink:href="/img/icons/sprite.svg#icon-phone"></use>
+                </svg>
+                <span class="main-nav__span">8 (499) 450-31-41</span>
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Обучение</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="+74994503141" class="main-nav__link">
-            <svg class="main-nav__svg" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.1004 14.5126L14.4466 13.17C14.6279 12.9915 14.8573 12.8692 15.1069 12.8182C15.3566 12.7671 15.6157 12.7894 15.8528 12.8824L17.4935 13.5356C17.7331 13.6327 17.9386 13.7983 18.0841 14.0116C18.2295 14.2249 18.3084 14.4764 18.3108 14.7343V17.731C18.3094 17.9065 18.2724 18.0799 18.202 18.2407C18.1317 18.4016 18.0294 18.5466 17.9014 18.667C17.7734 18.7873 17.6223 18.8807 17.4572 18.9413C17.292 19.0019 17.1163 19.0285 16.9406 19.0196C5.44416 18.3064 3.12444 8.59707 2.68574 4.88115C2.66537 4.69867 2.68398 4.51396 2.74033 4.33917C2.79669 4.16438 2.88951 4.00346 3.0127 3.86702C3.13589 3.73058 3.28665 3.62169 3.45507 3.54753C3.62348 3.47336 3.80573 3.4356 3.98983 3.43673H6.89248C7.1515 3.4375 7.40437 3.51552 7.61856 3.66078C7.83275 3.80604 7.99847 4.01188 8.09441 4.25184L8.74946 5.88804C8.84576 6.12362 8.87033 6.38228 8.8201 6.63171C8.76986 6.88114 8.64705 7.11028 8.467 7.2905L7.12085 8.63303C7.12085 8.63303 7.89609 13.8653 13.1004 14.5126Z" fill="#331A2F"/>
-            </svg>
-            <span class="main-nav__span">8 (499) 450-31-41</span>
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">
-            <svg  class="main-nav__svg" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.57108 14.1738C1.06255 14.3667 0.802403 14.9382 1.0444 15.4253C1.90764 17.1628 3.26156 18.6187 4.94814 19.6059C6.91915 20.7597 9.2257 21.2041 11.4843 20.8651C13.7428 20.5261 15.8173 19.4242 17.3628 17.7426C18.9082 16.0611 19.8315 13.9012 19.9791 11.6221C20.1267 9.34298 19.4897 7.08203 18.174 5.21519C16.8584 3.34834 14.9434 1.9881 12.7474 1.36064C10.5514 0.733173 8.20678 0.876304 6.10343 1.76623C4.3036 2.52774 2.77321 3.7968 1.69308 5.40848C1.39028 5.86029 1.57455 6.46053 2.05395 6.71745C2.53335 6.97436 3.12554 6.7896 3.43917 6.34523C4.29907 5.12687 5.4856 4.16631 6.87091 3.58018C8.55998 2.86554 10.4428 2.7506 12.2062 3.25448C13.9697 3.75835 15.5075 4.85068 16.5641 6.34982C17.6206 7.84897 18.1321 9.66459 18.0136 11.4948C17.8951 13.325 17.1536 15.0595 15.9126 16.4098C14.6715 17.7602 13.0056 18.645 11.1919 18.9172C9.37821 19.1895 7.52596 18.8326 5.94318 17.9061C4.64503 17.1462 3.5923 16.0406 2.89672 14.7215C2.64302 14.2404 2.07961 13.9808 1.57108 14.1738Z" fill="white"/>
-              <path d="M1.25 10.1932C0.817777 10.1932 0.467391 10.5436 0.467391 10.9758C0.467391 11.4081 0.817777 11.7584 1.25 11.7584L1.25 10.1932ZM14.3034 11.5292C14.609 11.2236 14.609 10.7281 14.3034 10.4224L9.3229 5.44195C9.01727 5.13632 8.52175 5.13632 8.21612 5.44195C7.91049 5.74758 7.91049 6.2431 8.21612 6.54873L12.6432 10.9758L8.21612 15.4029C7.91049 15.7086 7.91049 16.2041 8.21612 16.5097C8.52175 16.8153 9.01727 16.8153 9.3229 16.5097L14.3034 11.5292ZM1.25 11.7584L13.75 11.7584V10.1932L1.25 10.1932L1.25 11.7584Z" fill="white"/>
+        <li class="main-nav__item main-nav__item--entrance">
+          <a class="main-nav__link main-nav__link--entrance">
+            <svg  class="main-nav__svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <use xlink:href="/img/icons/sprite.svg#icon-entrance"></use>
             </svg>              
-            <span class="main-nav__span">Войти</span>
+            <span class="main-nav__span main-nav__span--entrance">Войти</span>
           </a>
         </li>
-        <li class="main-nav__item">
-          <buton class="main-nav__button main-nav__button--toggle">
+        <li class="main-nav__item main-nav__item--toggle">
+          <button class="main-nav__button main-nav__button--toggle">
             <span class="visually-hidden">Открыть меню</span>
-          </buton>
+          </button>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <div class="bread-crumbs">
-      <ul class="bread-crumbs__list">
-        <li class="bread-crumbs__item">
+      <ul class="bread-crumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="bread-crumbs__item" itemprop="itemListElement">
           <a href="#" class="bread-crumbs__link">Главная</a>
         </li>
-        <li class="bread-crumbs__item">
+        <li class="bread-crumbs__item" itemprop="itemListElement">
           <a href="#" class="bread-crumbs__link">Обучение</a>
         </li>
       </ul>
     </div>
     <article class="description">
-      <div class="description__wrapper">
-        <h1 class="description__title">
-          <span class="description__span--title">Обучающие курсы</span>
-           для поставщиков на маркетплейсы
-        </h1>
-        <div class="description__div">
+      <h1 class="description__title">
+        <span class="description__span--title">Обучающие курсы</span>
+         для поставщиков на маркетплейсы
+      </h1>
+      <div class="description__div">
+        <div class="description__div--cost">          
           <svg class="description__svg" width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="/img/icons/sprite.svg#icon-money"></use>
           </svg>
-          <p class="description__text">
+          <p class="description__text--cost">
             от
             <span class="description__span description__span--cost">19 900</span>
             ₽
           </p>
-          <p class="description__text">
-            <span class="description__span">
-              Обучающие курсы по работе и продвижению на маркетплейсах от 
-              практикующих селлеров.
-            </span>
-            <span class="description__span">
-              Добро пожаловать в Академию. Это место для эффективного обучения, 
-              где мы рассказываем, как работают маркетплейсы и никогда не вдаемся 
-              в теорию, которая не понадобится на практике.
-            </span>
-            <span class="description__span">
-              Наши уроки помогут понять логику работы площадок и взять управление 
-              продажами в свои руки, а не действовать наугад. Становись экспертом 
-              в работе с маркетплейсами и увеличивай свою прибыль.
-            </span>
-          </p>
         </div>
-      </div>
-      <img width="560px" height="560px" src="./img/image/Webp/Superman.webp" alt="Superman" class="description__img"> 
+        <p class="description__text">
+          <span class="description__span description__span--block">
+            Обучающие курсы по работе и продвижению на маркетплейсах от 
+            практикующих селлеров.
+          </span>
+          <span class="description__span description__span--block">
+            Добро пожаловать в Академию. Это место для эффективного обучения, 
+            где мы рассказываем, как работают маркетплейсы и никогда не вдаемся 
+            в теорию, которая не понадобится на практике.
+          </span>
+          <span class="description__span description__span--block">
+            Наши уроки помогут понять логику работы площадок и взять управление 
+            продажами в свои руки, а не действовать наугад. Становись экспертом 
+            в работе с маркетплейсами и увеличивай свою прибыль.
+          </span>
+        </p>
+      </div>      
+      <picture class="description__img">
+        <source media="(min-width: 1920px)" srcset="./img/image/Webp/SupermanMaxDesctop.webp">
+        <source media="(min-width: 1280px)" srcset="./img/image/Webp/SupermanDesctop.webp">
+        <source media="(min-width: 768px)" srcset="./img/image/Webp/SupermanTable.webp">
+        <img src="./img/image/Webp/SupermanMobile.webp" alt="Superman">
+      </picture>
     </article>
     <article class="about-us">
       <h2 class="about-us__title about-us__title--desktop">Небольшая предыстория о том, почему нам можно доверять</h2>
@@ -106,7 +115,11 @@
       <section class="about-us__section">
         <ul class="about-us__list">
           <li class="about-us__item">
-            <img src="./img/image/Webp/busnes.webp" alt="busnes" class="about-us__img">
+            <picture class="about-us__img about-us__img--busnes">
+              <source media="(min-width: 1920px)" srcset="./img/image/Webp/busnesMax.webp">
+              <source media="(min-width: 1280px)" srcset="./img/image/Webp/busnesMed.webp">
+              <img src="./img/image/Webp/busnesMin.webp" alt="busnes">
+            </picture>
             <p class="abuot-us__text">
               <span class="about-us__span">
                 Свой путь в бизнесе мы начали в 2016 г. У нас были свои 
@@ -120,7 +133,7 @@
           </li>
           <li class="about-us__item">
             <p class="abuot-us__text">
-              <span class="about-us__span">
+              <span class="about-us__span about-us__span--text">
                 Летом 2019 года мы вышли на маркетплейсы и после работы с 
                 ними в течение 2 месяцев приняли решение развивать только 
                 это направление. И не прогадали. Весь накопленный опыт мы 
@@ -130,29 +143,30 @@
                 Пришло время поделится знаниями и лайфхаками, которые 
                 будут собраны и доступны в нашей Академии stat4market.
               </span>
-            </p>
-            <img src="./img/image/Webp/computer.webp" alt="busnes" class="about-us__img">
+            </p>            
+            <picture class="about-us__img about-us__img--computer">
+              <source media="(min-width: 1920px)" srcset="./img/image/Webp/computerMax.webp">
+              <source media="(min-width: 1280px)" srcset="./img/image/Webp/computerMed.webp">
+              <img src="./img/image/Webp/computerMin.webp" alt="computer">
+            </picture>
+            </picture>
           </li>
         </ul>
       </section>
     </article>
     <article class="education">
-      <h2 class="education__title">
+      <h2 class="education__title education__title--h2">
         Обучение по продажам на маркетплейсах от 
-        <span class="education__span">
-          stat
-          <span class="education__span">4</span>
-          market
-        </span>
+        <span class="education__span--title">stat<span class="education__span--color">4</span>market</span>
       </h2>
-      <span class="education__span">
+      <span class="education__span education__span--main">
         «Увеличение реальной прибыли, конкретика и ключевые инструменты,
         которые дают результат» — на этом тезисе созданы наши курсы
       </span>
       <section class="education__section">
         <div class="education__block">
           <img src="./img/image/Webp/Icon-1.webp" alt="" class="education__img">
-          <h3 class="education__title">
+          <h3 class="education__title education__title--h3">
             Наше обучение построено очень лаконично и просто
           </h3>
           <span class="education__span">
@@ -161,7 +175,7 @@
         </div>
         <div class="education__block">
           <img src="./img/image/Webp/Icon-2.webp" alt="" class="education__img">
-          <h3 class="education__title">
+          <h3 class="education__title education__title--h3">
             Ко всем урокам есть дополнительные материалы
           </h3>
           <span class="education__span">
@@ -170,7 +184,7 @@
         </div>
         <div class="education__block">
           <img src="./img/image/Webp/Icon-3.webp" alt="" class="education__img">
-          <h3 class="education__title">
+          <h3 class="education__title education__title--h3">
             Наше обучение — практико-ориентированное
           </h3>
           <span class="education__span">
@@ -179,7 +193,7 @@
         </div>
         <div class="education__block">
           <img src="./img/image/Webp/Icon-4.webp" alt="" class="education__img">
-          <h3 class="education__title">
+          <h3 class="education__title education__title--h3">
             Создатели нашей Академии
           </h3>
           <span class="education__span">
@@ -190,4 +204,5 @@
     </article>
   </main>
 </body>
+<script src="./js/script.js"></script>
 </html>

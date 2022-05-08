@@ -1,0 +1,123 @@
+.about-us{
+  margin-bottom: 100px;
+  @media (min-width: $table-width){
+    margin-bottom: 120px;
+  }
+}
+
+.about-us__title{
+  font-family: 'LatoBold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+
+  color: #331A2F;
+  margin: 0 14px 60px;
+  text-align: center;
+  @media (min-width: $table-width){
+    font-size: 40px;
+    line-height: 50px;
+  }
+  @media (min-width: $desctop-width){
+    margin: 0 338px 96px 290px;
+    line-height: 64px;
+  }
+  @media (min-width: $max-desctop-width){
+    font-size: 48px;
+    margin: 0 538px 100px;
+  }
+}
+
+.about-us__title--desktop{
+  @media (max-width: $desctop-width-only){
+    display: none;
+  }
+}
+
+.about-us__title--mobile{
+  @media (min-width: $desctop-width){
+    display: none;
+  }
+}
+
+.about-us__list{
+  list-style: none;
+  margin: 0 15px -40px;
+  padding: 0;
+  @media (min-width: $table-width){
+    margin-bottom: -60px;
+  }
+  @media (min-width: $desctop-width){
+    margin: 0 142px 140px;
+  }
+  @media (min-width: $max-desctop-width){
+    margin: 0 291px 0 309px;
+  }
+}
+
+.about-us__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  @media (min-width: $table-width){
+    flex-direction: row;
+    margin: 0 0 65px;
+  }
+  @media (min-width: $desctop-width){
+    margin-bottom: 5px;
+  }
+  @media (min-width: $desctop-width){
+    margin-bottom: 7px;
+  }
+}
+
+.about-us__img--busnes{
+  @media (min-width: $table-width){
+    margin-right: 41px;
+  }
+  @media (min-width: $desctop-width){
+    margin-right: 81px;
+  }
+  @media (min-width: $max-desctop-width){
+    margin-right: 82px;
+  }
+}
+
+.about-us__img--computer{
+  @media (min-width: $table-width){
+    margin-left: 41px;
+  }
+  @media (min-width: $desctop-width){
+    margin-left: 57px;
+  }  
+  @media (min-width: $max-desctop-width){
+    margin-left: 82px;
+  }
+}
+
+.abuot-us__text{
+  margin: 0;
+  padding: 0;
+  @media (max-width: $mobile-width-only){
+    order: 1;
+  }
+}
+
+.about-us__span{
+  display: block;
+  color: rgba(51, 26, 47, 0.8);
+  @media (min-width: $max-desctop-width){    
+    font-size: 25px;
+    line-height: 160%;
+  }
+}
+
+.about-us__span--text{
+  margin-bottom: 10px;
+  @media (min-width: $table-width){
+    margin-bottom: 15px;
+  }
+}

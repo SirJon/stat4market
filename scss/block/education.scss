@@ -1,0 +1,148 @@
+.education__title{
+  font-family: "LatoBold";
+  font-style: normal;
+  text-align: center;
+  color: #331A2F;
+}
+
+.education__title--h2{  
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  margin: 0 30px 25px;
+  @media (min-width: $table-width){    
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0 71px 25px;
+  }
+  @media (min-width: $desctop-width){
+    line-height: 64px;
+    margin: 0 319px 30px;
+  }
+  @media (min-width: $max-desctop-width){
+    font-size: 48px;
+    margin: 0 621px 30px;
+  }
+}
+
+.education__title--h3{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 10px;
+  @media (min-width: $table-width){
+    text-align: left;
+  }
+  @media (min-width: $desctop-width){
+    font-size: 20px;
+  }
+  @media (min-width: $max-desctop-width){    
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
+
+.education__section{
+  margin: 0 30px 70px;
+  @media (min-width: $table-width){
+    margin: 0 100px 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+  @media (min-width: $desctop-width){
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 40px 120px;
+  }
+  @media (min-width: $max-desctop-width){
+    margin: 0 195px 130px;
+    grid-gap: 123px;
+  }
+}
+
+.education__block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  @media (min-width: $table-width){    
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+  }
+}
+
+.education__span{
+  font-family: "LatoRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+
+  text-align: center;
+
+  color: rgba(51, 26, 47, 0.8);
+  @media (min-width: $table-width){
+    text-align: left;
+  }
+  @media (min-width: $max-desctop-width){
+    font-size: 18px;
+  }
+}
+
+.education__span--main{
+  font-size: 18px;
+  display: block;
+  margin: 0 15px 30px;
+  text-align: center;
+  @media (min-width: $table-width){    
+    font-size: 20px;
+    line-height: 160%;
+    margin: 0 42px 50px;
+  }
+  @media (min-width: $desctop-width){
+    margin: 0 298px 85px;
+  }
+  @media (min-width: $max-desctop-width){
+    font-size: 25px;
+    margin: 0 537px 85px;
+  }
+
+}
+
+.education__span--color{
+  color: #CF51CE;
+}
+
+.education__span--title{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;    
+    height: 4px;
+
+    background: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
+    border-radius: 5px;    
+    @media (min-width: $table-width){
+      height: 6px;
+      bottom: -8px;
+    }
+  }
+}
+
+.education__img{
+  margin-bottom: -10px;
+  @media (min-width: $table-width){
+    margin: 0 0 -20px -25px;
+  }
+  @media (min-width: $desctop-width){
+    margin-bottom: -10px;
+  }
+  @media (min-width: $max-desctop-width){
+    margin-bottom: 0;
+  }
+}
